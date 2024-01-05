@@ -2,46 +2,56 @@
 public class RomanToInteger {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		System.out.println(romanToInt("LVIII"));
 
 	}
 
 	public static int romanToInt(String s) {
-		int result = 0;
 
 		char[] roman = s.toCharArray();
 
-		for (char ch : roman) {
+		int sum = 0;
 
-			switch (ch) {
-				case 'I':
-				case 'X':
-				case 'C':
-					
-					
-					break;
-				case 'V':
-					break;
-				case 'L':
-					break;
-				case 'D':
-					break;
-				case 'M':
-					break;
-					
+		int preValue = getValue(roman[0]);
 
+		for (int i = 1; i < roman.length; i++) {
+
+			int temp = getValue(roman[i]);
+
+			if (preValue < temp) {
+
+				sum -= preValue;
+			} else {
+
+				sum += preValue;
 			}
-
-//			I             1
-//			V             5
-//			X             10
-//			L             50
-//			C             100
-//			D             500
-//			M             1000
+			preValue = temp;
 		}
+		sum += preValue; //因迴圈終止最後一筆沒加到故迴圈跑回後需要加回去
+		return sum;
 
-		return result;
+	}
+
+	public static int getValue(char ch) {
+		switch (ch) {
+		case 'I':
+			return 1;
+		case 'V':
+			return 5;
+		case 'X':
+			return 10;
+		case 'L':
+			return 50;
+		case 'C':
+			return 100;
+		case 'D':
+			return 500;
+		case 'M':
+			return 1000;
+		default:
+			return 0;
+		}
 
 	}
 }
