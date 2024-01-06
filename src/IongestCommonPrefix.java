@@ -1,34 +1,31 @@
 public class IongestCommonPrefix {
-
+	//14
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String[] strs = { "flower", "flow", "flight" };
+		String[] strs = { "a" };
 		IongestCommonPrefix.longestCommonPrefix(strs);
+		System.out.println(IongestCommonPrefix.longestCommonPrefix(strs));
 
 	}
 
 	public static String longestCommonPrefix(String[] strs) {
-		if (strs.length <= 1) {
+		if (strs == null || strs.length == 0) {
 			return "";
 		}
-		String result = "";
-		String str = strs[0];
-		char[] res = str.toCharArray();
+		int strLen = strs[0].length();
+		int count = strs.length;
 
-		for (int a = 1; a < strs.length; a++) {
+		for (int i = 0; i < strLen; i++) {
 
-			for (int b = 1; b < res.length; b++) {
-				String temp = str.substring(0, b);
-				if (strs[a].contains(temp)) {
-					result = strs[a].substring(strs[a].indexOf(temp), temp.length());
+			char ch = strs[0].charAt(i);
+			for (int j = 1; j < count; j++) {
+
+				if (i == strs[j].length() || strs[j].charAt(i) != ch) {
+					return strs[0].substring(0, i);
 				}
 			}
-			str = result;
-			res = result.toCharArray();
-
 		}
-		System.out.println(result);
-		return result;
+		return strs[0];
 	}
 }
