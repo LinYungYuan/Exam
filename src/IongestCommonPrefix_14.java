@@ -1,11 +1,11 @@
-public class IongestCommonPrefix {
+public class IongestCommonPrefix_14 {
 	//14
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		String[] strs = { "a" };
-		IongestCommonPrefix.longestCommonPrefix(strs);
-		System.out.println(IongestCommonPrefix.longestCommonPrefix(strs));
+		IongestCommonPrefix_14.longestCommonPrefix(strs);
+		System.out.println(IongestCommonPrefix_14.longestCommonPrefix(strs));
 
 	}
 

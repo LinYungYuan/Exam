@@ -1,4 +1,4 @@
-public class MegerTwoList {
+public class MegerTwoList_21 {
 	//21
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

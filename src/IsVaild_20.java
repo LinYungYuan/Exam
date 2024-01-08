@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class IsVaild {
+public class IsVaild_20 {
 	//20
 	public static void main(String[] args) {
 

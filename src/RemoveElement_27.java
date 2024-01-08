@@ -1,5 +1,5 @@
 
-public class RemoveElement {
+public class RemoveElement_27 {
 	//27
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
