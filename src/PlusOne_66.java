@@ -4,6 +4,10 @@ public class PlusOne_66 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] digits = { 1, 2, 3 };
+		int[] digits2 = { 2, 2, 9 }; //{2,3,0}
+		//123+1=124
+		//223+1=224
+		//229+1=230
 		plusOne(digits);
 
 	}
