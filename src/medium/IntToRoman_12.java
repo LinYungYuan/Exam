@@ -9,7 +9,6 @@ public class IntToRoman_12 {
 
 	public static String intToRoman(int num) {
 		
-		String ans = "";
 		
 		
 		
